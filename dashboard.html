@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <script>
+    if (!sessionStorage.getItem("token")) {
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <div class="chat-box">
+    <h2>WebSocket Chat</h2>
+
+    <div id="messages" class="messages"></div>
+
+    <input type="text" id="msg" placeholder="Type message...">
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
